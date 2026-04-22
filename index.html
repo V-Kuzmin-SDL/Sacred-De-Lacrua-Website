@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Sacred De Lacrua — Композитор</title>
+    <meta name="description" content="Музыка как отражение души. Официальный сайт композитора Sacred De Lacrua.">
+    <!-- Open Graph / соцсети -->
+    <meta property="og:title" content="Sacred De Lacrua">
+    <meta property="og:description" content="Музыка как отражение души">
+    <meta property="og:image" content="https://sdltech.tech/assets/Pictures/logo2.jpg">
+    <meta property="og:url" content="https://sdltech.tech">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <!-- Favicon (просто заглушка) -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎵</text></svg>">
+    <!-- Шрифты -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- ПЕРЕКЛЮЧАТЕЛЬ ЯЗЫКОВ + ССЫЛКА НА ЧАТ -->
+    <div class="lang-switcher">
+        <a href="/chat_login.php" class="chat-link" target="_blank">💬 Чат</a>
+        <span class="lang-divider"></span>
+        <button class="lang-btn active" data-lang="ru">RU</button>
+        <span class="lang-divider"></span>
+        <button class="lang-btn" data-lang="en">EN</button>
+    </div>
+
+    <!-- ЛОГОТИП -->
+    <div class="logo-container">
+        <img src="assets/Pictures/logo2.jpg" alt="Sacred De Lacrua" class="logo" loading="lazy">
+    </div>
+
+    <!-- HERO -->
+    <header class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1 class="hero-name" id="heroName">Sacred<br>De Lacrua</h1>
+            <div class="hero-subtitle" id="heroSubtitle">Виталий Кузьмин • Северодвинск</div>
+            <div class="hero-quote">
+                <span class="quote-line"></span>
+                <p id="heroQuote">«Музыка — это отражение души,<br>ритм моей жизни»</p>
+                <span class="quote-line"></span>
+            </div>
+            <div class="hero-scroll-hint" id="heroScrollHint">↓ Узнать историю</div>
+        </div>
+    </header>
+
+    <!-- БИОГРАФИЯ -->
+    <section class="bio">
+        <div class="container">
+            <h2 class="section-title" id="bioTitle">О себе</h2>
+            <div class="bio-content">
+                <div class="bio-text" id="bioText"></div>
+                <div class="bio-image">
+                    <div class="image-placeholder">
+                        <img src="assets/Pictures/sdlstudios.jpg" alt="SDL Studios" loading="lazy">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- СТИЛИ МУЗЫКИ (динамическая загрузка) -->
+    <section class="music-styles">
+        <div class="container">
+            <h2 class="section-title" id="stylesTitle">Стили музыки</h2>
+            <div class="styles-grid" id="stylesGrid">
+                <!-- Здесь будет загрузка -->
+            </div>
+        </div>
+    </section>
+
+    <!-- СЛАЙДЕР ФОТО -->
+    <section class="photo-slider-section">
+        <div class="container">
+            <h2 class="section-title" id="galleryTitle">Галерея</h2>
+            <div class="slider-container">
+                <div class="slider" id="photoSlider"></div>
+                <button class="slider-btn prev" id="prevSlide">❮</button>
+                <button class="slider-btn next" id="nextSlide">❯</button>
+                <div class="slider-dots" id="sliderDots"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- КОНТАКТЫ -->
+    <section class="contacts">
+        <div class="container">
+            <h2 class="section-title" id="contactsTitle">Контакты</h2>
+            <div class="contacts-content">
+                <p class="contacts-intro" id="contactsIntro">Готов к сотрудничеству и интересным проектам</p>
+                <div class="contacts-links">
+                    <a href="https://vk.com/sacreddelacrua" target="_blank" class="contact-link vk">VK (персональная)</a>
+                    <a href="https://vk.com/publicsdl" target="_blank" class="contact-link vk-group">VK (сообщество)</a>
+                    <a href="https://t.me/ваш_telegram" target="_blank" class="contact-link telegram">Telegram</a>
+                    <a href="mailto:Srxfiles@yandex.ru" class="contact-link email">Srxfiles@yandex.ru</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ФИКСИРОВАННЫЙ ПЛЕЕР (с прогресс-баром) -->
+    <div class="audio-player" id="player">
+        <div class="player-inner">
+            <button class="play-btn" id="playBtn">▶</button>
+            <div class="track-details">
+                <div class="track-name" id="trackName">Выберите трек</div>
+                <div class="track-album" id="trackAlbum">—</div>
+            </div>
+            <!-- Прогресс-бар -->
+            <div class="progress-container" id="progressContainer">
+                <div class="progress-bar" id="progressBar"></div>
+                <input type="range" class="progress-slider" id="progressSlider" value="0" step="0.01">
+            </div>
+            <div class="time-display" id="timeDisplay">00:00 / 00:00</div>
+        </div>
+    </div>
+
+    <audio id="audio" preload="auto"></audio>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,18 @@
+# Чат и БД (секретные данные)
+chat.db
+private/
+
+# Логи
+*.log
+
+# Медиафайлы (если хотите исключить MP3 и JPG — раскомментируйте нужные строки)
+# assets/Music/*.mp3
+# assets/Pictures/Real/*.jpg
+
+# Файлы окружения
+.env
+
+# Настройки IDE
+.vscode/
+.DS_Store
+Thumbs.db
